@@ -1,6 +1,7 @@
 CC=gcc
 
-BLD=xwow.o bg/bg_corners.o bg/bg_fade.o bg/bg_cyber.o bg/bg_square.o
+BLD=xwow.o bg/bg_corners.o bg/bg_fade.o bg/bg_cyber.o bg/bg_square.o \
+  bg/bg_party.o
 
 %.o: %.c
 	$(CC) -c -o $@ $<
@@ -15,6 +16,6 @@ uninstall:
 	rm -f /usr/local/bin/xwow
 
 clean:
-	rm *.o
-	rm bg/*.o
-	rm xwow
+	rm -f *.o
+	rm -f bg/*.o
+	rm -f xwow
