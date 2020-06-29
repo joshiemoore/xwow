@@ -51,6 +51,13 @@ int main(int argc, char** argv)
         bg_idx = rand() % BG_COUNT;
     }
 
+    // check for out of bounds
+    if (bg_idx < 0 || bg_idx >= BG_COUNT)
+    {
+        fprintf(stderr, "ID must be in range 0-%d\n.", BG_COUNT - 1);
+        exit(1);
+    }
+
     // initialize X
     if (!(x_disp = XOpenDisplay(NULL)))
     {
