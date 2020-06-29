@@ -3,6 +3,10 @@ xwow is a lightweight program for X11 that draws dynamic and interactive desktop
 
 This program is intended for use with simple/non-bloat window managers, such as dwm. It may not work correctly in full desktop environments such as KDE or GNOME, as these draw layers over the root window, rendering it invisible.
 
+[Demo on YouTube](https://www.youtube.com/watch?v=HlG9TPtvXyo)
+
+![screenshot](screenshot.png)
+
 ## Building
 Library requirements: `Xlib, SDL2`
 
