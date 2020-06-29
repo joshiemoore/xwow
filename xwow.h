@@ -12,13 +12,15 @@
 #include "bg/bg_corners.h"
 #include "bg/bg_fade.h"
 #include "bg/bg_cyber.h"
+#include "bg/bg_square.h"
 
 // main array of pointers to background draw functions
 const void* BG_RENDER_FUNCS[] =
 {
     &bg_corners_draw,
     &bg_fade_draw,
-    &bg_cyber_draw
+    &bg_cyber_draw,
+    &bg_square_draw
 };
 
 // total number of backgrounds in the array

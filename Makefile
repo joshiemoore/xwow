@@ -1,6 +1,6 @@
 CC=gcc
 
-BLD=xwow.o bg/bg_corners.o bg/bg_fade.o bg/bg_cyber.o
+BLD=xwow.o bg/bg_corners.o bg/bg_fade.o bg/bg_cyber.o bg/bg_square.o
 
 %.o: %.c
 	$(CC) -c -o $@ $<
