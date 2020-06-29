@@ -36,7 +36,8 @@ int main(int argc, char** argv)
     if (argc > 2)
     {
         fprintf(stderr, "Too many arguments.\n");
-        fprintf(stderr, "Usage: xwow [id]");
+        fprintf(stderr, "Usage: xwow [id]\n");
+        exit(1);
     }
     else if (argc == 2)
     {
