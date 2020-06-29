@@ -33,6 +33,8 @@ void cleanup(int d)
 
 int main(int argc, char** argv)
 {
+    srand(time(NULL));
+
     if (argc > 2)
     {
         fprintf(stderr, "Too many arguments.\n");
@@ -47,7 +49,6 @@ int main(int argc, char** argv)
     else
     {
         // user did not provide an id, pick random background
-        srand(time(NULL));
         bg_idx = rand() % BG_COUNT;
     }
 
