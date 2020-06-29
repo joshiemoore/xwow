@@ -9,6 +9,24 @@
 
 #include <stdlib.h>
 
+
+
+
+// ******* USER CONFIG ******* //
+
+// random background interval
+// set this to a non-zero number of seconds to randomize the background
+// at this interval
+#define XWOW_RAND_RATE 0
+
+// *************************** //
+
+
+
+
+// xwow framerate
+#define XWOW_FPS 100
+
 #include "bg/bg_corners.h"
 #include "bg/bg_fade.h"
 #include "bg/bg_cyber.h"

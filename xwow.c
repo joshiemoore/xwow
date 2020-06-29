@@ -86,16 +86,36 @@ int main(int argc, char** argv)
         exit(1);
     }
 
+    // handle signals
     signal(SIGINT, cleanup);
 
+    // set render function
     xwow_render = BG_RENDER_FUNCS[bg_idx];
+
+    // set random background wait interval
+    float bg_wait = XWOW_RAND_RATE * 1000;
 
     while (1)
     {
-        SDL_Delay(10);
+        float delta = 1000 / XWOW_FPS;
+
+        SDL_Delay(delta);
         SDL_PollEvent(NULL);
 
         // draw the background
         xwow_render(sdl_rend);
+
+        // decrement the wait interval, update bg if necessary
+        if (XWOW_RAND_RATE > 0)
+        {
+            bg_wait -= delta;
+
+            if (bg_wait <= 0)
+            {
+                bg_wait = XWOW_RAND_RATE * 1000;
+                bg_idx = rand() % BG_COUNT;
+                xwow_render = BG_RENDER_FUNCS[bg_idx];
+            }
+        }
     }
 }
